@@ -1,12 +1,20 @@
 interface IBase {
 	id: number;
 }
-
-interface IDerivedFromBase extends IBase {
+class Base implements IBase {
+	id: number;
+	constructor(_id: number) {
+		this.id = _id;
+	}
+}
+class Derived extends Base {
 	name: string;
+	constructor(_id: number, _name: string) {
+		super(_id);
+		this.id = _id;
+		this.name = _name;
+	}
 }
 
-class Class implements IDerivedFromBase {
-	name = "What";
-	id = 3;
-}
+const myClass = new Derived(2, "Ti Jhae");
+console.log(myClass);
