@@ -1,7 +1,8 @@
 // CLASS
 
 class ClassWithPublicProp {
-    private id :number=0;
+    private id: number = 0;
+    readonly name: string= "klsdf"; /* This make the name property to have readonly access*/
 }
 
 const publicAccess = new ClassWithPublicProp()
