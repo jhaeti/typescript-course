@@ -11,7 +11,7 @@ class Derived extends Base {
 	name: string;
 	constructor(_id: number, _name: string) {
 		super(_id);
-		this.id = _id;
+		
 		this.name = _name;
 	}
 }
