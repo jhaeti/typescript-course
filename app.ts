@@ -1,11 +1,12 @@
-// CLASS
-
-class ClassWithPublicProp {
-    private id: number = 0;
-    readonly name: string= "klsdf"; /* This make the name property to have readonly access*/
+interface IBase {
+	id: number;
 }
 
-const publicAccess = new ClassWithPublicProp()
-// publicAccess.id = 15 /* This yield an error when the private modifier is set on a property in a class */
+interface IDerivedFromBase extends IBase {
+	name: string;
+}
 
-console.log(publicAccess)
+class Class implements IDerivedFromBase {
+	name = "What";
+	id = 3;
+}
