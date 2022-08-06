@@ -1,8 +1,4 @@
-// GENERICS
-function identity<T>(args:T): T {
-	return args
+// GENERICS INTERFACES
+interface GenericInterface<T> {
+	(args: T): T
 }
-
-const a = identity("stringshd")
-const b = identity<number>(4)
-const c = identity<boolean>(false)
