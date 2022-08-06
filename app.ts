@@ -3,7 +3,7 @@ interface GenericInterface<T> {
 	(args: T): T
 }
 
-function identify<T>(args: T): T {
+function identify(args: number): number {
 	return args
 }
 
